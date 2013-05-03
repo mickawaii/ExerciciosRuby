@@ -1,8 +1,6 @@
 def palindrome?(string) 
 	str = string.downcase.gsub(/\W/, '')
-	if(str.reverse == str)
-		return true
-	else
-		return false
-	end
+	str.reverse == str
 end
+
+puts palindrome?("Madam, I'm Adam!")

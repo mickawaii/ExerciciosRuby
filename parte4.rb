@@ -50,3 +50,12 @@ class JellyBean < Dessert
     return !(@flavor == 'black licorice')
   end 
 end
+
+d1 = Dessert.new('Banana Split', 1234)
+j1 = JellyBean.new('Jellie', 123, 'black licorice')
+
+puts d1.getName
+puts d1.delicious?
+puts j1.getName
+puts j1.getFlavor
+puts j1.delicious?

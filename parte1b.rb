@@ -1,12 +1,11 @@
 def count_words(string)
 	h = Hash.new
-	str = string.downcase.gsub(/\W/, ' ').split
-	str.each do |s|
-		if(h.has_key?(s.to_s))
-			h[s] += 1
-		else
-			h.store(s, 1)
-		end
+	
+	string.downcase.gsub(/\W/, ' ').split.each do |s|
+		(h.has_key?(s.to_s)) ? h[s] += 1 : h.store(s, 1)
 	end
-	return h.inspect
+	
+	h
 end
+
+puts count_words("A man, a plan, a canal -- Panama")

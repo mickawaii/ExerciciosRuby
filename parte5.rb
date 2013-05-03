@@ -15,6 +15,10 @@ class Class
       def #{attr_name}_history
         return @arr.inspect
       end
+
+      def #{attr_name}_count
+        return @arr.length
+      end
       "
   end
 end
@@ -23,9 +27,9 @@ class Foo
   attr_accessor_with_history :bar
 end
 
-puts "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 f = Foo.new 
 f.bar = 1
 f.bar = 2
+f.bar = 535
 puts f.bar_history # => if your code works, should be [nil,1,2]
-
+puts f.bar_count

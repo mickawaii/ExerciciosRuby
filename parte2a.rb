@@ -19,3 +19,5 @@ def rps_game_winner(game)
 		return game[1][0]
 	end
 end
+
+puts rps_game_winner([ [ "Armando", "P" ], [ "Dave", "S" ] ])
