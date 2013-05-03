@@ -3,8 +3,8 @@ class NoSuchStrategyError < StandardError ; end
 
 def rps_game_winner(game)
 	raise WrongNumberOfPlayersError unless game.length == 2 
-	#game[0][1].upcase!
-	#game[1][1].upcase!
+	game[0][1].upcase!
+	game[1][1].upcase!
 	str = ['R', 'P', 'S']
 	if(!str.member?(game[0][1]) || !str.member?(game[1][1]))
 		raise NoSuchStrategyError
@@ -31,4 +31,3 @@ def rps_tournament_winner(tournament)
 			return tournament = rps_game_winner(tournament)
 		end
 end
-
