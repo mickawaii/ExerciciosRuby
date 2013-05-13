@@ -7,5 +7,4 @@ def count_words(string)
 	
 	h
 end
-
 puts count_words("A man, a plan, a canal -- Panama")
